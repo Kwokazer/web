@@ -8,6 +8,8 @@ COPY . .
 
 EXPOSE 8000
 
+RUN apk add postgresql-client build-base postgresql-dev
+
 RUN pip install -r req.txt
 
 RUN adduser --disabled-password artem
